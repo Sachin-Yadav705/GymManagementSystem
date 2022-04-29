@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+    <struts>
+    
+    <package name="pack" extends="struts-default">
+    
+    
+     
+     <!--USER INSERT  -->
+    <action name="insertuser" method="ADDDATA" class="action.user_action">
+    <result name="DATAinsertSUCCESSFULLy">USERsuccess.jsp</result>
+    
+    </action>
+    
+    <!--USER SEARCH  -->
+    <action name="SearchUserId" method="SearchUser" class="action.user_action">
+    <result name="UserSearchSuccess">userSEARCH.jsp</result>
+     <result name="UserErrorSearchSuccess">USERerror.jsp</result>
+    </action>
+    
+    <!-- SEARCH USER FOR DELETE -->
+    <action name="SearchIDtoDELETE" method="SearchUser" class="action.user_action">
+    <result name="UserSearchSuccess">userDELETE.jsp</result>
+    <result name="UserErrorSearchSuccess">USERerror.jsp</result>
+    </action>
+    
+    <!--DELETE  USER -->
+    <action name="userdeleteAction" method="userdelete" class="action.user_action">
+    <result name="UserDeleteSuccess">USERDElsuccess.jsp</result>
+    </action>
+    
+    <!--SEARCH USER TO UPDATE  -->
+    <action name="SearchUsertoUPDATE" method="SearchUser" class="action.user_action">
+    <result name="UserSearchSuccess">userUPDATE.jsp</result>
+    <result name="UserErrorSearchSuccess">USERerror.jsp</result>
+    </action>
+    
+    <!--UPDATE USER  -->
+     <action name="UpdateUser" method="updateuser" class="action.user_action">
+    <result name="UdateUserSuccesss">USERsuccess.jsp</result>
+    </action>
+    
+    <!--SEARCH USER TO SELF UPDATE  -->
+    <action name="SearchUsertoSELFUPDATE" method="SearchUser" class="action.user_action">
+    <result name="UserSearchSuccess">userSELFupdate.jsp</result>
+    <result name="UserErrorSearchSuccess">USERerror.jsp</result>
+    </action>
+    
+    <!--SELF UPDATE USER  -->
+     <action name="UpdateUserself" method="updateuser" class="action.user_action">
+    <result name="UdateUserSuccesss">userHome.jsp</result>
+    </action>
+    
+    
+    <!--SHOW ALL DATA OF USER  -->
+    <action name="userViewAction" method="AllUser" class="action.user_action">
+    <result name="ViewAllUserinoneTable">userALLSHOW.jsp</result>
+    </action>
+    
+    <!--LOGIN USER  -->
+    <action name="UserLoginAction" method="USERLogin" class="action.user_action">
+    <result name="UserLoginSuccess">userHome.jsp</result>
+    <result name="UserLoginFail">userLOGIN.jsp</result>
+    <result name="error">USERerror.jsp</result>
+    </action>
+    
+    
+    <!--USER LOGOUT  -->
+     <action name="UserlogoutAction" method="logout" class="action.user_action">
+    <result name="loggedout">userLOGIN.jsp</result>
+    </action>
+    
+    
+ <!--  --> <!--  -->  <!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
+    
+    
+    <!-- ADMIN -->
+    <action name="insertadmin" method="ADDDATA" class="action.admin_action">
+    <result name="ADMINdataInserted">success.jsp</result>
+     <result name="input">adminINSERT.jsp</result> 
+    </action>
+    
+    <!-- SEARCH ADMIN -->
+     <action name="SearchAdmin" method="AdminSearch" class="action.admin_action">
+    <result name="AdminSearchSuccess">adminSEARCH.jsp</result>
+    <result name="AdminErrorFoundSuccess">ERRORPAGE.jsp</result>
+    </action>
+    
+    <!--SEARCH ADMIN TO UPDATE  -->
+    <action name="SearchAdminTOUpdate" method="AdminSearch" class="action.admin_action">
+    <result name="AdminSearchSuccess">adminUPDATE.jsp</result>
+     <result name="AdminErrorFoundSuccess">ERRORPAGE.jsp</result>
+    </action>
+    
+    <!-- UPDATE  ADMIN-->
+    <action name="AdminUpdateForm" method="UpdateAdmin" class="action.admin_action">
+    <result name="AdminUpdateSuccess">adminLOGdash.jsp</result>
+    </action>
+    
+     <!-- SEARCH ADMIN TO DELETE -->
+     <action name="SEARCHAdminToDelete" method="AdminSearch" class="action.admin_action">
+    <result name="AdminSearchSuccess">adminDELETE.jsp</result>
+     <result name="AdminErrorFoundSuccess">ERRORPAGE.jsp</result>
+    </action>
+    
+    
+    <!-- DELETE ADMIN -->
+     <action name="DeleteAdminAction" method="DeleteAdm" class="action.admin_action">
+    <result name="AdminDeleteSuccess">Success.jsp</result>
+    </action>
+    
+    <!--SHOW ALL DATA OF ADMIN  -->
+    <action name="adminViewAction" method="SHOWAlladmin" class="action.admin_action">
+    <result name="ViewAllAdmin">adminALLSHOW.jsp</result>
+    </action>
+    
+    
+    <!--ADMIN LOGIN  -->
+        <action name="LoginAdmin" method="ADMINLogin" class="action.admin_action">
+    	<result name="AdminLoginSuccess">adminHome.jsp</result>
+    	<result name="AdminLoginFail">AdminLOGIN.jsp</result>
+    	<result name="error">ERRORPAGE.jsp</result>
+    	</action>
+
+    <!-- ADMIN LOGOUT -->
+
+    <action name="adminlogoutAction" method="logout" class="action.admin_action">
+    	<result name="ADMINloggedout">AdminLOGIN.jsp</result>
+    	</action>
+    
+    <!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
+    <!--ATTENDANCE  -->
+    <!-- INSERT -->
+    <action name="insertattendance" method="ADDDATA" class="action.Attendance_action">
+    <result name="AttendanceDataInserted">ATTENDANCEsuccess.jsp</result>
+   </action>
+    
+    <!--ATTENDANCE SEARCH  -->
+    <action name="SearchATTENDANCE" method="AdminSearch" class="action.Attendance_action">
+    <result name="AttendanceSearchSuccess">attendanceSEARCH.jsp</result>
+    <result name="AttendanceErrorFoundSuccess">ATTENDANCEerror.jsp</result>
+    </action>
+    
+    <!--SEARCH ATTENDANCE TO UPDATE  -->
+      <action name="SearchAttenTOUpdate" method="AdminSearch" class="action.Attendance_action">
+    <result name="AttendanceSearchSuccess">attendanceUPDATE.jsp</result>
+    <result name="AttendanceErrorFoundSuccess">ATTENDANCEerror.jsp</result>
+    </action>
+    
+    <!--UPDATE ATTENDANCE  -->
+     <action name="AdminUpdateForm" method="UpdateATTendance" class="action.Attendance_action">
+    <result name="AdminUpdateSuccess">ATTENDANCEsuccess.jsp</result>
+    </action>
+    
+    <!--SEARCH ATTENDANCE TO DELETE-->
+     <action name="SEARCHAttendToDelete" method="AdminSearch" class="action.Attendance_action">
+    <result name="AttendanceSearchSuccess">attendanceDELETE.jsp</result>
+    <result name="AttendanceErrorFoundSuccess">ATTENDANCEerror.jsp</result>
+    </action>
+    
+    <!--DELETE ATTENDANCE-->
+     <action name="DeleteAttendanceAction" method="DeleteAtt" class="action.Attendance_action">
+    <result name="ATTendanceDeleteSuccess">ATTENDANCEDElsuccess.jsp</result>
+    </action>
+    
+    <!--SHOW ALL ATTENDANCE  -->
+    <action name="ATTENDANCEViewAction" method="AllATTENDANCE" class="action.Attendance_action">
+    <result name="ViewAllATTENDANCEinoneTable">attendanceALLSHOW.jsp</result>
+    </action>
+    
+    
+ <!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->   
+    <!--ORDER -->
+    <action name="insertorder" method="ADDDATA" class="action.order_action">
+    <result name="OrderDataInserted">ORDERsuccess.jsp</result>
+    </action>
+    
+    <!--SEARCH ORDER  -->
+    <action name="SearchOrder" method="SEARCHorder" class="action.order_action">
+    <result name="OrderSearchSuccessfully">orderSEARCH.jsp</result>
+     <result name="OrderErrorFoundSuccess">ORDERerror.jsp</result>
+    </action>
+    
+    <!--SEARCH ORDER TO UPDATE -->
+    <action name="SearchOrderTOUpdate" method="SEARCHorder" class="action.order_action">
+     <result name="OrderSearchSuccessfully">orderUPDATE.jsp</result>
+    <result name="OrderErrorFoundSuccess">ORDERerror.jsp</result>
+    </action>
+    
+    <!-- UPDATE ORDER -->
+    <action name="ORDERUpdateForm" method="UpdateORDER" class="action.order_action">
+    <result name="OrderUpdateSuccessfully">ORDERUPDTsuccess.jsp</result>
+    </action>
+    
+    <!--SEARCH TO DELETE ORDER  -->
+     <action name="SearchOrdertoDELETE" method="SEARCHorder" class="action.order_action">
+    <result name="OrderSearchSuccessfully">orderDELETE.jsp</result>
+    <result name="OrderErrorFoundSuccess">ORDERerror.jsp</result>
+    </action>
+    
+    <!-- DELETE ORDER -->
+    <action name="OrderdeleteAction" method="Deleteorder" class="action.order_action">
+    <result name="DeleteOrderSuccessfully">ORDERDElsuccess.jsp</result>
+    </action>
+    
+    <!--SHOW ALL ORDER  -->
+    <action name="orderViewAction" method="AllORDER" class="action.order_action">
+    <result name="ViewAllOrderinoneTable">orderALLSHOW.jsp</result>
+    </action>
+    
+    <!--  -->
+     <action name="yourorderAction" method="Viewmyorder" class="action.order_action">
+    <result name="ViewMyorderSuccess">yourorder.jsp</result>
+    </action> 
+<!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->  
+    
+    <!-- INSERT PACKAGE -->
+     <action name="insertpackage" method="ADDDATA" class="action.Package_action">
+    <result name="PackageDataInserted">PACKAGEsuccess.jsp</result>
+    </action>
+    
+    <!-- SEARCH PACKAGE -->
+    <action name="SearchPACkId" method="SearchPACKAGE" class="action.Package_action">
+    <result name="PACKAGESearchSuccessfully">packageSEARCH.jsp</result>
+    <result name="PackageErrorFoundSuccess">PACKAGEerror.jsp</result>
+    </action>
+    
+    <!-- SEARCH PACKAGE TO UPDATE -->
+    <action name="SearchPackagetoUPDATE" method="SearchPACKAGE" class="action.Package_action">
+    <result name="PACKAGESearchSuccessfully">packageUPDATE.jsp</result>
+    <result name="PackageErrorFoundSuccess">PACKAGEerror.jsp</result>
+    </action>
+    
+    <!--UPDATE PACKAGE  -->
+    <action name="Updatepack" method="UpdatePACKAGE" class="action.Package_action">
+    <result name="UdatePackageSuccessFully">PACKAGEsuccess.jsp</result>
+    </action>
+    
+    <!-- SEARCH PACKAGE TO DELETE -->
+    <action name="SearchPACKAGEtoDELETE" method="SearchPACKAGE" class="action.Package_action">
+    <result name="PACKAGESearchSuccessfully">packageDELETE.jsp</result>
+    <result name="PackageErrorFoundSuccess">PACKAGEerror.jsp</result>
+    </action>
+    <!-- DELETE PACkAGE -->
+    <action name="PACKAGEdeleteAction" method="DELETEPACKAGE" class="action.Package_action">
+    <result name="PAckageDeleteSuccessfully">PACKAGEDELsuccess.jsp</result>
+    </action>
+    
+    <!--SHOW ALL PACKAGE  -->
+    <action name="Viewallpack" method="Packgedisplay" class="action.Package_action">
+    <result name="AllPackageDisplayed">PackageDisplay.jsp</result>
+    </action>
+    
+   <!--Display Data  -->
+    <action name="PackageViewAction" method="AllPACKAGE" class="action.Package_action">
+    <result name="ViewAllPACKAGEinoneTable">packageALLSHOW.jsp</result>
+    </action>
+<!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->    
+    <!--INSERT PAYMENT  -->
+    
+    <action name="insertpayment" method="ADDDATA" class="action.Payment_action">
+    <result name="PaymentDataInserted" type="chain">insertorder</result>
+    </action>
+    
+    <!-- SEARCH PAYMENT -->
+    <action name="SearchPAYmentId" method="SearchPAYMENT" class="action.Payment_action">
+    <result name="PaymentSearchSuccessfully">paymentSEARCH.jsp</result>
+     <result name="PaymentErrorFoundSuccess">PAYMENTerror.jsp</result>
+    </action>
+    
+    <!--SEARCH PAYMENT FOR UPDATE  -->
+    <action name="SearchPaymenttoUPDATE" method="SearchPAYMENT" class="action.Payment_action">
+    <result name="PaymentSearchSuccessfully">paymentUPDATE.jsp</result>
+      <result name="PaymentErrorFoundSuccess">PAYMENTerror.jsp</result>
+    </action>
+    
+    <!-- UPDATE PAYMENT -->
+    <action name="UpdatePAYMENT" method="UpdatePAYMENT" class="action.Payment_action">
+    <result name="UdatePaymentSuccesssfully">PAYMENTUPDTsuccess.jsp</result>
+    </action>
+    
+    <!--SEARCH PAYMENT FOR DELETE  -->
+    <action name="SearchpaytoDELETE" method="SearchPAYMENT" class="action.Payment_action">
+    <result name="PaymentSearchSuccessfully">paymentDELETE.jsp</result>
+      <result name="PaymentErrorFoundSuccess">PAYMENTerror.jsp</result>
+    </action>
+    
+    <!-- DELETE PAYMENT -->
+    <action name="PaymentdeleteAction" method="PAYMENTdelete" class="action.Payment_action">
+    <result name="PaymentDeleteSuccessfully">PAYMENTDElsuccess.jsp</result>
+    </action>
+    
+    <!-- SHOW ALL PAYMENT -->
+    <action name="PaymentViewAction" method="AllPAYMENT" class="action.Payment_action">
+    <result name="ViewAllUserinoneTable">paymentALLSHOW.jsp</result>
+    </action>
+    
+    
+<!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->    
+    <!-- INSERT PRODUCT  -->
+     <action name="insertproduct" method="ADDDATA" class="action.Product_action">
+    <result name="ProductDataInserted">PRODUCTsuccess.jsp</result>
+    </action>
+    
+    <!-- SEARCH PRODUCT -->
+    <action name="SearchProductId" method="SearchProduct" class="action.Product_action">
+    <result name="ProductSearchSuccessfully">productSEARCH.jsp</result>
+    <result name="productErrorFoundSuccess">PRODUCTerror.jsp</result>
+    </action>
+    
+    <!-- SEARCH PRODUCT FOR UPDATE -->
+     <action name="SearchProducttoUPDATE" method="SearchProduct" class="action.Product_action">
+    <result name="ProductSearchSuccessfully">productUPDATE.jsp</result>
+    <result name="productErrorFoundSuccess">PRODUCTerror.jsp</result>
+    </action>
+
+     <!-- UPDATE PRODUCT -->
+     <action name="UpdatePRODUCT" method="UpdatePRODUCT" class="action.Product_action">
+    <result name="UdatePRODUCTSuccessfully">PRODUCTsuccess.jsp</result>
+    </action>
+    
+    <!-- SEARCH PRODUCT TO DELETE -->
+    <action name="SearchProducttoDELETE" method="SearchProduct" class="action.Product_action">
+    <result name="ProductSearchSuccessfully">productDELETE.jsp</result>
+    <result name="productErrorFoundSuccess">PRODUCTerror.jsp</result>
+    </action>
+
+    <!--DELETE PRODUCT  -->
+     <action name="PRODUCTdeleteAction" method="PRODUCTdelete" class="action.Product_action">
+    <result name="PRODUCTDeleteSuccessfully">PRODUCTDELsuccess.jsp</result>
+    </action>
+    
+    <!--VIEW ALL PRODUCTS  -->
+    <action name="ProductViewAction" method="AllPRODUCT" class="action.Product_action">
+    <result name="ViewAllProductinoneTable">productALLSHOW.jsp</result>
+    </action>
+    
+    <!--PRODUCT ADD TO CART  -->
+     <action name="addtocartaction" method="AddtoCart"  class="action.Product_action">
+    <result name="ProaddedSuccessfully" type="chain">viewalldata</result>
+    </action>
+    
+     <action name="viewalldata" method="getAllRegistration" class="action.Product_action">  
+    <result name="AllRegistrationSuccess">displaydata.jsp</result>
+    </action>
+    
+    <action name="viewalldatacart" method="ViewCart" class="action.Product_action">
+   <result name="ViewAllcartSuccess">viewCart.jsp</result>
+   </action>
+    
+    <action name="deletefromcartaction" method="deleteCart" class="action.Product_action">
+   <result name="dataDeletedSuccessfully" type="chain">viewalldatacart</result>
+   </action>
+   
+   
+   <!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --> 
+       </package>
+    </struts>

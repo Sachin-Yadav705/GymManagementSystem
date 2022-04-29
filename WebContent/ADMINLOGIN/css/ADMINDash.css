@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;0,700;0,900;1,600;1,900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+
+}
+.page{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.sidebar {
+  position: absolute;
+  bottom: 0px;
+  width: 245px;
+  height: 87%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.header {
+  width: 100%;
+  height: 82px;
+  background-color: #063146;
+  position: absolute;
+  top: 0px;
+  box-shadow: 0 9px 8px rgba(0,0,0,.5);
+}
+
+
+.header img{
+  height: 67px;
+  width: 300px;
+  
+}
+h5{
+	color: #9E9E9E;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: absolute;
+   right: 79px;
+    top: 33px;
+    text-align: center;
+    max-width: 166px;
+   
+}
+
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  right: 19px;
+  top: 25px;
+  z-index:99;
+}
+
+
+.dropbtn {
+  
+ color: white;
+ margin-left: 25px;
+  font-size: 40px;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 16px;
+    top: 43px;
+  background-color: #f1f1f1;
+  min-width: 129px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content i{
+  font-size: 20px;
+  padding-left: 8px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn  {font-size: 40px;}
+
+.header p{
+  font-size: 35px;
+  position: absolute;
+  left: 32%;
+  top: 29%;
+  color: white;
+  text-shadow: 2px 9px 5px   #101010;
+ font-family: 'Raleway', sans-serif;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+}
+
+
+
+.sidebar ul a{
+  display:block;
+  height: 100%;
+  width: 100%;
+  line-height: 62px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+  font-family: 'Raleway', sans-serif;
+}
+.sidebar ul li:hover a{
+  padding-left: 70px;
+  background-color: #063146;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+
+
+section{
+  height: 545px;
+    position: absolute;
+    left: 245px;
+    top: 82px;
+    width: 82%;
+    justify-content: center;
+    text-align: center;
+   
+background-color: rgba(0, 0, 0, 0.4);
+  
+}
+
+.table_section{
+	 height: 545px;
+    position: absolute;
+    top: 82px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.table_section a img{
+	height: 42px;
+  width: 51px;
+  padding-right: 10px;
+  position: absolute;
+    left: 22px;
+    top: 7px;
+}
+.image{
+	 height: 540px;
+    position: absolute;
+    left: 245px;
+    top: 82px;
+    width: 82%;
+    justify-content: center;
+    text-align: center;
+   
+   
+}
+.image img {
+ height: 545px;
+width: 100%;
+
+  
+} 
+
+header{
+  font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+}
+section .cards{
+  display: block; 
+    right: 0;
+    top: 0;
+    height: inherit;
+    position: absolute;
+    background: #D9D9D9;
+    justify-content: center;
+    z-index:1;
+}
+section .card{
+      padding: 30px 26px 10px 26px;
+  list-style: none;
+ background-color: #D9D9D9;
+ margin-right: 10px; 
+    display: grid;
+    justify-items: center;
+  
+}
+section .card a{
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+    text-shadow: -5px -2px 6px #101010;
+
+}
+section .card a:hover{
+ color: black;
+    font-weight: bolder;
+
+}
+section .card  img{
+  height: 40px;
+  width: 40px;
+  padding-right: 10px;
+}
+/*  */
+section .homeline h1{
+	color: #ece8e8b0;
+    width: 80%;
+    font-size: 80px;
+    position: absolute;
+    top: 143px;
+    left: 117px;
+    background-color: #0000006b;
+    font-family: 'Metal Mania', cursive;
+    font-weight: bold;
+}
+section span h1{
+    font-size: 44px;
+    position: absolute;
+    left: 363px;
+    color: aliceblue;
+    z-index:1;
+    text-transform: uppercase;
+}

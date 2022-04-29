@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">	
+ 
+ <hibernate-mapping>
+ 
+ <class name="pojo.Product" table="Product_table" schema="public">
+   		<id name="proid" type="int">
+   		<generator class="increment"></generator>
+   	</id>
+   	<property name="proname" column="ProName" type="string"></property>
+   	<property name="proprice" column="price" type="double"></property>
+   	<property name="prodescription" column="Description" type="string"></property>
+   	<property name="prodiscount" column="discount"  type="int"></property>
+   	<property name="data"  column="data" type="binary"></property>
+   	
+   	</class> 
+   	
+	</hibernate-mapping>

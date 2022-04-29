@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+  		
+  		
+  		
+  		<validators>
+  		
+  		<validator type="requiredstring">
+  		
+  		<param name="fieldname">name</param>
+  		<message>Name is Required</message>
+  		</validator>
+  		
+  		<validator type="requiredstring">
+  		
+  		<param name="fieldname">address</param>
+  		<message>Fill address</message>
+  		</validator>
+  		
+  		
+  		
+  		<validator type="requiredstring">
+  		
+  		<param name="fieldname">email</param>
+  		<message>email can't be  blank</message>
+  		</validator>
+  		
+  		
+  		<validator type="email">
+  		<param name="fieldname">email</param>
+  		<message>Please enter correct format of email</message>
+  		</validator>
+  		
+  		<validator type="regex">
+  		<param name="fieldname">phno</param>
+  		<param name="expression">[0-9]{10}</param>
+  		 <param name="regex"><![CDATA[\d{3}-\d{3}-\d{4}]]></param>
+  		<message>Data Must be Numeric and lenght must be 10</message>
+  		</validator>
+    		
+  		</validators>

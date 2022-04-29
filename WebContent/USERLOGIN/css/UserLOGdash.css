@@ -1,0 +1,585 @@
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	
+}
+
+
+nav{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 84px;
+	background-color: rgba(70, 67, 67, 0.6);
+	 z-index: 9999 !important;
+}
+
+.leftmenu{
+	width: 25%;
+	line-height: 20px;
+	float: left;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.leftmenu img{
+	padding-left: 0px;
+	margin-top: 5px;
+	margin-left: 10px;
+	height: 65px;
+	
+}
+.rightmenu{
+	width: 66%;
+	height: 80px;
+	margin-left: 290px;
+}
+.rightmenu a:link{
+	text-decoration: none;
+	color: white;
+}
+.rightmenu a{
+	color: white;
+}
+.rightmenu ul li {
+	font-size: 18px;
+	display: inline-block;
+	list-style: none;
+	font-weight: bold;
+	font-family: 'Acme', sans-serif;
+	line-height: 120px;
+	text-transform: uppercase;
+	padding-left: 20px;
+	transition: 0.2s;
+
+}
+.rightmenu ul{
+	margin-left: 250px;
+        margin-top: -17px;
+
+}
+.rightmenu ul li a:hover{
+	color: #CD5555;
+	}
+
+#home{
+	color: #CD5555;
+}
+
+ .dropdown {
+ width: 6%;
+ height: 44px;
+float: right;
+	 margin-top: -47px;
+}
+.cart {
+
+padding-right: 20px;
+  font-size: 30px;
+  border: none;
+  width: 3%;
+    position: absolute;
+    right: 85px;
+    top: 20px;
+}
+.cart i{
+	color:white;
+}
+.cart i:hover{
+	color: grey;
+	cursor: pointer;
+}
+
+
+.dropbtn {
+  
+ color: white;
+ margin-left: 25px;
+  font-size: 33px;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 21px;
+    top: 62px;
+  background-color: #f1f1f1;
+  min-width: 129px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 15px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Acme', sans-serif;
+}
+
+.dropdown-content i{
+  font-size: 20px;
+  padding-left: 8px;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn  {
+	font-size: 40px;
+    color: grey;
+}
+
+/* SECTION START */
+section{
+	width: 100%;
+	height: 100vh;
+	 position: absolute; 
+    top: 0;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.image{
+	height:100vh;
+	width:100%;
+    justify-content: center;
+    text-align: center;
+   
+   
+}
+.image img {
+width: 100%;
+height: 100vh;
+} 
+.image  h2{
+	
+	position: absolute;
+    top: 100px;
+    color: aliceblue;
+   left: 3%;
+    font-size: 50px;
+    font-family: 'Acme', sans-serif;
+}
+.image  h2 span{
+	color: #c11325;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 31px;
+    font-family: 'Acme', sans-serif;
+}
+.image h1{
+	position: absolute;
+    top: 300px;
+    color: aliceblue;
+    left: 50px;
+    font-size: 48px;
+	font-family: 'Acme', sans-serif;
+    word-spacing: 8px;
+    text-transform: uppercase;
+}
+.image h3{
+	position: absolute;
+    top: 366px;
+    color: aliceblue;
+    left: 50px;
+    font-size: 48px;
+	font-family: 'Acme', sans-serif;
+    word-spacing: 8px;
+    text-transform: uppercase;
+}
+.image h1 span{
+	color: #c11325;
+}
+.image h3 span{
+	color: #c11325;
+}
+
+
+/* SECTION ENd */
+
+
+
+
+
+/* FOOTER START */
+footer{
+	
+	width: 100%;
+	height: 350px;
+	background-color: #151515;
+	position: relative;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	z-index: 99;
+}
+
+.footer_about_trainer{
+	height: 250px;
+	width: 400px;
+	
+	position: absolute;
+	top: 60px;
+	left: 80px;
+}
+.footer_about_trainer h2{
+	color: #fff;
+	
+}
+.footer_social{
+	height: 250px;
+	width: 200px;
+	position: absolute;
+	top: 60px;
+	left: 550px;
+}
+
+.footer_social h2{
+	color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.footer_social a{
+	color: #ffffff;
+    display: block;
+    font-size: 24px;
+    margin-right: 32px;
+    margin-top: 16px;
+     color: #e4381C
+}
+.fab {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.footer_contactus{
+	height: 250px;
+	width: 250px;
+	position: absolute;
+	top: 60px;
+	right: 80px;
+}
+.footer-widget {
+    margin-bottom: 30px;
+    }
+
+.footer-info li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 34px;
+    color: #e4381C;
+    }
+
+  .footer-info li {
+    list-style: none;
+    font-size: 16px;
+    color: #afb4bf;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    }
+
+.footer-info li span {
+    color: #ffffff;
+    display: block;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+.footer-info li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    color: #e4381C;
+}
+
+.footer_contactus h2{
+	color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.copyright{
+	background: #000000;
+    border-top: 3px solid #0a0a0a;
+    padding: 20px 0;
+    margin-top: 0px;
+    text-align: center;
+
+
+}
+.copyright p{
+	font-size: 16px;
+    color: #afb4bf;
+
+}
+
+/* FOOETR END */
+
+
+.shopping{
+	height: 627px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #000000c7;
+}
+.product {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 310px;
+  max-height:350px;
+      padding-top: 25px;
+  text-align: center;
+  font-family: arial;
+  display: inline-block;
+  margin-top: 125px;
+  margin-left: 25px;
+  background: aliceblue;
+  position: relative;
+}
+
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.product button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  background-color: #CD5555;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 6px;
+}
+.product button a{
+	color:white;
+	
+}
+.product h1{
+	text-transform: uppercase;
+}
+.product p{
+	    color: black;
+    font-weight: 900;
+}
+.product h3{
+	position: absolute;
+    top: 1px;
+    left: 1px;
+    background-color: #1c1c3bed;
+    padding: 27px 18px;
+    transform: rotate(-45deg);
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 69%;
+    color: white;
+}
+.product .des{
+	    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.product button:hover {
+  opacity: 0.7;
+    background-color: red;
+}
+
+/* Package Style  Start*/
+.package {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 270px;
+  max-height:350px;
+      padding-top: 12px;
+  text-align: center;
+  font-family: arial;
+  display: inline-block;
+  margin-top: 125px;
+  margin-left: 25px;
+  background: aliceblue;
+  position: relative;
+  background-color: antiquewhite;
+}
+
+.package .price {
+  color:  #860430;
+  font-size: 22px;
+}
+
+
+
+.package button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  background-color: #CD5555;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 6px;
+}
+.package button a{
+	color:white;
+	
+}
+.package h1{
+	text-transform: uppercase;
+	    font-family: sans-serif;
+}
+.package p{
+	    color: black;
+    font-weight: 900;
+}
+.package h3{
+	position: absolute;
+    top: 1px;
+    left: 1px;
+    background-color: #1c1c3bed;
+    padding: 27px 18px;
+    transform: rotate(-45deg);
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 69%;
+    color: white;
+}
+.package .des{
+	    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.package button:hover {
+  opacity: 0.7;
+    background-color: red;
+}
+
+/*package Style End  */
+
+
+
+
+.pagination {
+  display: inline-block;
+  position: absolute;
+    bottom: 20px;
+    left: 32%;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size:20px;
+  font-weight:bolder;
+   border: 1px solid #ddd;
+  margin: 0 4px;
+  background-color: aliceblue;
+}
+.pagination a:hover{
+	background-color:red;
+	color:white;
+}
+
+.cartlist{
+	max-height: 542px;
+    width: 100%;
+   background-color: #a1afbbed;
+    margin-top: 85px;
+    font-size: 19px;
+    font-weight: bolder;
+    
+    
+}
+
+.cartlist button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  background-color: #CD5555;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 7px;
+    font-size: 18px;
+  margin-top: 6px;
+}
+.cartlist button a{
+	color:white;
+	text-decoration:none;
+}
+.cartlist button:hover {
+  opacity: 0.7;
+    background-color: red;
+}
+
+/*Form Design  */
+.wrap-contact100 {
+   max-width: 699px;
+    max-height: 552px;
+    background: white;
+    border-radius: 2px;
+    padding: 66px 115px 66px 115px;
+    position: relative;
+    top: 83px;
+    left: 22%;
+    background-color: #9d9c9ec7;
+
+}
+.form h1{
+	
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    color: #000000;
+    line-height: 0.2;
+        text-transform: uppercase;
+    
+}
+.label{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight:bold;
+    color: #555555;;
+    line-height: 1.7;
+    margin-top: 17px;
+    float: left;
+    margin-right: 20px;
+    font-size: 16px;
+    
+}
+.btn{
+	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 100px;
+    height: 50px;
+    background-color: #ff4b5a;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    transition: all 0.4s;
+    cursor: pointer;
+     text-transform: uppercase;
+     margin-top:20px;
+     border-radius: 10px;
+}
+.btn:hover{
+	background-color: #333333;
+	
+}
+

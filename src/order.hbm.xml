@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">	
+ 
+ <hibernate-mapping>
+ 
+ <class name="pojo.order" table="order_table" schema="public">
+   		<id name="orderid" type="int">
+   		<generator class="increment"></generator>
+   	</id>
+   	<property name="usid" column="userid" type="int"></property>
+   
+   	<property name="orddate" column="date" type="date"></property>
+   	<property name="ordamt" column="amt" type="int"></property>
+   	<property name="orddeladdress" column="address" type="string"></property>
+   <property name="ordstatus" column="status" type="string"></property>
+   <property name="payid" column="payid" type="int"></property>
+   <set name="products" cascade="save-update" table="order_product">
+   <key column="orderid"></key>
+  <many-to-many column="proid" class="pojo.Product"></many-to-many>
+  
+   </set> 
+   
+   	</class> 
+	</hibernate-mapping>
+	
+	

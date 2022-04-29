@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+  
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">  
+        <property name="driverClassName"  value="org.postgresql.Driver"></property>  
+        <property name="url" value="jdbc:postgresql://localhost:5432/FITNESS_HOUR"></property>  
+        <property name="username" value="admin"></property>  
+        <property name="password" value="admin"></property>  
+ </bean>  
+   
+  
+    <bean id="mysessionFactory"  class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
+        <property name="dataSource" ref="dataSource"> </property>  
+          
+         <property name="mappingResources">  
+           <list>  
+           
+			   <value>user.hbm.xml</value>
+			   <value>admin.hbm.xml</value>
+			   <value>Attendance.hbm.xml</value>
+			   <value>order.hbm.xml</value>
+			   <value>Package.hbm.xml</value>
+			   <value>Payment.hbm.xml</value>	   
+				<value>Product.hbm.xml</value>   
+	   </list>  
+        </property>  
+        
+         
+          
+        <property name="hibernateProperties">  
+            <props>  
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>  
+                <prop key="hibernate.hbm2ddl.auto">create</prop>  
+                <prop key="hibernate.show_sql">true</prop>  
+                <prop key="hibernate.connection.release_mode">after_statement</prop>
+				
+				<prop key="hibernate.c3p0.minPoolSize">5</prop>
+				<prop key="hibernate.c3p0.maxPoolSize">500</prop>
+				<prop key="hibernate.c3p0.timeout">25200</prop>
+				<prop key="hibernate.c3p0.max_statement">500</prop>
+				<prop key="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</prop>
+            </props>  
+        </property>  
+    </bean> 
+	<!--USER  -->
+	<bean id="usrreg" class="dioimpl.user_dioimpl">
+	<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+	
+	<!--ADMIN  -->
+	<bean id="admreg" class="dioimpl.admin_dioimpl">
+	<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+	
+	<!--ATTENDANCE  -->
+	<bean id="attreg" class="dioimpl.Attendance_dioimpl">
+	<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+	
+	<!--ORDER  -->
+	<bean id="ordreg" class="dioimpl.order_dioimpl">
+	<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+	
+	<!--PACKAGE  -->
+	<bean id="packreg" class="dioimpl.Package_dioimpl">
+	<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+	
+	<!--PAYMENT  -->
+	<bean id="payreg" class="dioimpl.Payment_dioimpl">
+	<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+	
+	<!--PRODUCT  -->
+	<bean id="proreg" class="dioimpl.Product_dioimpl">
+	<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+	
+
+</beans>
+
+
+
+
+
+

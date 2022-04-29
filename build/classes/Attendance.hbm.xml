@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">	
+ 
+ <hibernate-mapping>
+ 
+ <class name="pojo.Attendance" table="Attendance_table" schema="public">
+   		<id name="attid" type="int">
+   		<generator class="increment"></generator>
+   	</id>
+   	<property name="usid" column="User_ID" type="int"></property>
+   	<property name="attdate" column="DATE" type="date"></property>
+   	<property name="status" column="status" type="string"></property>
+   	
+   	</class> 
+ 	
+	</hibernate-mapping>
